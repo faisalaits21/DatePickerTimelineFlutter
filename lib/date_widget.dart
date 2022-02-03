@@ -35,21 +35,21 @@ class DateWidget extends StatelessWidget {
         width: width,
         margin: EdgeInsets.all(3.0),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(8.0)),
-          color: selectionColor,
+          border: Border(bottom: BorderSide(color: selectionColor, width: 2)),
         ),
         child: Padding(
-          padding: EdgeInsets.all(8),
+          padding: EdgeInsets.all(5),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Text(new DateFormat("MMM", locale).format(date).toUpperCase(), // Month
-                  style: monthTextStyle),
+              // Text(new DateFormat("MMM", locale).format(date).toUpperCase(), // Month
+              //     style: monthTextStyle),
+              Text(new DateFormat("E", locale).format(date).toUpperCase(),
+                  // WeekDay
+                  style: dayTextStyle),
               Text(date.day.toString(), // Date
                   style: dateTextStyle),
-              Text(new DateFormat("E", locale).format(date).toUpperCase(), // WeekDay
-                  style: dayTextStyle)
             ],
           ),
         ),

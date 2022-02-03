@@ -68,8 +68,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 80,
                   controller: _controller,
                   initialSelectedDate: DateTime.now(),
-                  selectionColor: Colors.black,
-                  selectedTextColor: Colors.white,
+                  selectionColor:  Colors.blue,
+                  selectedTextColor: Colors.blue,
                   inactiveDates: [
                     DateTime.now().add(Duration(days: 3)),
                     DateTime.now().add(Duration(days: 4)),
