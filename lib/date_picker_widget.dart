@@ -112,14 +112,14 @@ class _DatePickerState extends State<DatePicker> {
     }
 
     this.selectedDateStyle =
-      widget.dateTextStyle.copyWith(color: widget.selectedTextColor, fontSize: 12);
+      widget.dateTextStyle.copyWith(color: widget.selectedTextColor);
     this.selectedMonthStyle =
       widget.monthTextStyle.copyWith(color: widget.selectedTextColor);
     this.selectedDayStyle =
         widget.dayTextStyle.copyWith(color: widget.selectedTextColor);
 
     this.deactivatedDateStyle =
-        widget.dateTextStyle.copyWith(color: widget.deactivatedColor, fontSize: 12);
+        widget.dateTextStyle.copyWith(color: widget.deactivatedColor);
     this.deactivatedMonthStyle =
         widget.monthTextStyle.copyWith(color: widget.deactivatedColor);
     this.deactivatedDayStyle =
