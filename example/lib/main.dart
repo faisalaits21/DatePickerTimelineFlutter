@@ -61,23 +61,38 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: EdgeInsets.all(20),
               ),
               Container(
-                child: DatePicker(
-                  DateTime.now(),
-                  width: 60,
-                  height: 80,
-                  controller: _controller,
-                  initialSelectedDate: DateTime.now(),
-                  inactiveDates: [
-                    DateTime.now().add(Duration(days: 3)),
-                    DateTime.now().add(Duration(days: 4)),
-                    DateTime.now().add(Duration(days: 7))
+                height: 100,
+                child: Stack(
+                  children: [
+                    DatePicker(
+                      DateTime.now(),
+                      width: 60,
+                      height: 100,
+                      controller: _controller,
+                      selectedTextColor: Colors.blue,
+                      initialSelectedDate: DateTime.now(),
+                      inactiveDates: [
+                        DateTime.now().add(Duration(days: 3)),
+                        DateTime.now().add(Duration(days: 4)),
+                        DateTime.now().add(Duration(days: 7))
+                      ],
+                      onDateChange: (date) {
+                        // New date selected
+                        setState(() {
+                          _selectedValue = date;
+                        });
+                      },
+                    ),
+                    Positioned(
+
+                      bottom: 1,
+                        left: 1,
+                        right: 1,
+                        child: Container(
+                      height: 1,
+                      color: Colors.grey,
+                    ))
                   ],
-                  onDateChange: (date) {
-                    // New date selected
-                    setState(() {
-                      _selectedValue = date;
-                    });
-                  },
                 ),
               ),
             ],
