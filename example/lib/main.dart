@@ -1,4 +1,5 @@
 import 'package:date_picker_timeline/date_picker_timeline.dart';
+import 'package:date_picker_timeline/date_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -67,9 +68,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     DatePicker(
                       DateTime.now(),
                       width: 60,
-                      height: 100,
+                      weekDayPosition: WeekDayPosition.bottom,
+                      height: 60,
                       controller: _controller,
-                      selectedTextColor: Colors.blue,
+                      selectionColor: Color.fromRGBO(11, 225, 161, 1),
+                      selectedTextColor: Colors.white,
                       initialSelectedDate: DateTime.now(),
                       inactiveDates: [
                         DateTime.now().add(Duration(days: 3)),
@@ -84,14 +87,13 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                     ),
                     Positioned(
-
-                      bottom: 1,
+                        bottom: 1,
                         left: 1,
                         right: 1,
                         child: Container(
-                      height: 1,
-                      color: Colors.grey,
-                    ))
+                          height: 1,
+                          color: Colors.grey,
+                        ))
                   ],
                 ),
               ),
